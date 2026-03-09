@@ -22,28 +22,34 @@ export default function AlertsPage() {
 
   const columns = [
     { key: 'source_platform', header: 'Source', render: (a: any) => (
-      <span className="inline-flex items-center justify-center h-7 w-7 rounded bg-gray-100 text-xs font-bold text-gray-600" title={a.source_platform}>
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded bg-gray-100 dark:bg-dark-700 text-xs font-bold text-gray-600 dark:text-gray-400" title={a.source_platform}>
         {getPlatformIcon(a.source_platform)}
       </span>
     )},
     { key: 'severity', header: 'Severity', render: (a: any) => <SeverityBadge severity={a.severity} /> },
     { key: 'alert_name', header: 'Alert Name', render: (a: any) => (
       <div className="max-w-xs">
-        <p className="font-medium text-gray-900 truncate">{a.alert_name}</p>
-        <p className="text-xs text-gray-500">{a.source_alert_id}</p>
+        <p className="font-medium text-gray-900 dark:text-gray-100 truncate">{a.alert_name}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400">{a.source_alert_id}</p>
       </div>
     )},
-    { key: 'customer_name', header: 'Customer', render: (a: any) => <span className="text-gray-700">{a.customer_name || a.customer_code}</span> },
+    { key: 'customer_name', header: 'Customer', render: (a: any) => <span className="text-gray-700 dark:text-gray-300">{a.customer_name || a.customer_code}</span> },
     { key: 'alert_status', header: 'Status', render: (a: any) => <StatusBadge status={a.alert_status} /> },
-    { key: 'assigned', header: 'Assigned To', render: (a: any) => a.analyst_first_name ? `${a.analyst_first_name} ${a.analyst_last_name}` : <span className="text-gray-400">Unassigned</span> },
-    { key: 'alert_created_at', header: 'Created', render: (a: any) => <span className="text-gray-500 text-xs">{formatDate(a.alert_created_at)}</span> },
+    { key: 'assigned', header: 'Assigned To', render: (a: any) => a.analyst_first_name ? <span className="dark:text-gray-300">{`${a.analyst_first_name} ${a.analyst_last_name}`}</span> : <span className="text-gray-400 dark:text-gray-500">Unassigned</span> },
+    { key: 'alert_created_at', header: 'Created', render: (a: any) => <span className="text-gray-500 dark:text-gray-400 text-xs">{formatDate(a.alert_created_at)}</span> },
   ];
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Alert Queue</h1>
-        <button onClick={() => refetch()} className="btn-secondary flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Alert Queue</h1>
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+        </div>
+        <button onClick={() => refetch()} className="btn-secondary flex items-center gap-2 dark:hover:bg-dark-600">
           <RefreshCw className="h-4 w-4" />
           Refresh
         </button>
@@ -54,7 +60,7 @@ export default function AlertsPage() {
         <div className="flex flex-wrap gap-4">
           <div className="flex-1 min-w-[200px]">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 dark:text-gray-500" />
               <input
                 type="text"
                 placeholder="Search alerts..."

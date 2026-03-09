@@ -41,23 +41,23 @@ export default function CasesPage() {
   });
 
   const columns = [
-    { key: 'case_number', header: 'Case #', render: (c: any) => <span className="font-mono font-medium text-primary-600">{c.case_number}</span> },
+    { key: 'case_number', header: 'Case #', render: (c: any) => <span className="font-mono font-medium text-primary-600 dark:text-primary-400">{c.case_number}</span> },
     { key: 'severity', header: 'Severity', render: (c: any) => <SeverityBadge severity={c.severity} /> },
-    { key: 'priority', header: 'Priority', render: (c: any) => <span className={`font-medium ${c.priority === 'P1' ? 'text-red-600' : c.priority === 'P2' ? 'text-orange-600' : 'text-gray-600'}`}>{c.priority}</span> },
+    { key: 'priority', header: 'Priority', render: (c: any) => <span className={`font-medium ${c.priority === 'P1' ? 'text-red-600 dark:text-red-400' : c.priority === 'P2' ? 'text-orange-600 dark:text-orange-400' : 'text-gray-600 dark:text-gray-400'}`}>{c.priority}</span> },
     { key: 'title', header: 'Title', render: (c: any) => (
       <div className="max-w-sm">
-        <p className="font-medium text-gray-900 truncate">{c.title}</p>
-        <p className="text-xs text-gray-500">{c.customer_name}</p>
+        <p className="font-medium text-gray-900 dark:text-gray-100 truncate">{c.title}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400">{c.customer_name}</p>
       </div>
     )},
     { key: 'status', header: 'Status', render: (c: any) => <StatusBadge status={c.status} /> },
-    { key: 'assigned', header: 'Analyst', render: (c: any) => c.analyst_first_name ? `${c.analyst_first_name} ${c.analyst_last_name}` : <span className="text-gray-400">Unassigned</span> },
+    { key: 'assigned', header: 'Analyst', render: (c: any) => c.analyst_first_name ? <span className="dark:text-gray-300">{`${c.analyst_first_name} ${c.analyst_last_name}`}</span> : <span className="text-gray-400 dark:text-gray-500">Unassigned</span> },
     { key: 'sla', header: 'SLA', render: (c: any) => (
       (c.sla_response_breached || c.sla_resolution_breached)
-        ? <span className="text-xs font-medium text-red-600">Breached</span>
-        : <span className="text-xs text-green-600">On Track</span>
+        ? <span className="text-xs font-medium text-red-600 dark:text-red-400">Breached</span>
+        : <span className="text-xs text-green-600 dark:text-green-400">On Track</span>
     )},
-    { key: 'updated_at', header: 'Updated', render: (c: any) => <span className="text-xs text-gray-500">{formatRelativeTime(c.updated_at)}</span> },
+    { key: 'updated_at', header: 'Updated', render: (c: any) => <span className="text-xs text-gray-500 dark:text-gray-400">{formatRelativeTime(c.updated_at)}</span> },
   ];
 
   const canCreate = user && ['analyst', 'manager', 'admin'].includes(user.role);
@@ -65,7 +65,7 @@ export default function CasesPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Cases</h1>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Cases</h1>
         {canCreate && (
           <button onClick={() => setShowCreateModal(true)} className="btn-primary flex items-center gap-2">
             <Plus className="h-4 w-4" /> New Case
@@ -105,44 +105,44 @@ export default function CasesPage() {
 
       {/* Create Case Modal */}
       {showCreateModal && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between p-6 border-b">
-              <h2 className="text-xl font-semibold">Create New Case</h2>
-              <button onClick={() => setShowCreateModal(false)} className="text-gray-400 hover:text-gray-600"><X className="h-5 w-5" /></button>
+        <div className="fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-dark-800 rounded-2xl shadow-xl dark:border dark:border-dark-700 w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between p-6 border-b dark:border-dark-700">
+              <h2 className="text-xl font-semibold dark:text-gray-100">Create New Case</h2>
+              <button onClick={() => setShowCreateModal(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"><X className="h-5 w-5" /></button>
             </div>
             <form onSubmit={e => { e.preventDefault(); createMutation.mutate(newCase); }} className="p-6 space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Customer</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Customer</label>
                 <select className="input-field" required value={newCase.customer_id} onChange={e => setNewCase(c => ({ ...c, customer_id: e.target.value }))}>
                   <option value="">Select customer...</option>
                   {customers?.data?.map((c: any) => <option key={c.id} value={c.id}>{c.name} ({c.code})</option>)}
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
                 <input type="text" className="input-field" required value={newCase.title} onChange={e => setNewCase(c => ({ ...c, title: e.target.value }))} placeholder="Case title" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Description</label>
                 <textarea className="input-field" rows={3} value={newCase.description} onChange={e => setNewCase(c => ({ ...c, description: e.target.value }))} placeholder="Describe the incident..." />
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Severity</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Severity</label>
                   <select className="input-field" value={newCase.severity} onChange={e => setNewCase(c => ({ ...c, severity: e.target.value }))}>
                     <option value="critical">Critical</option><option value="high">High</option>
                     <option value="medium">Medium</option><option value="low">Low</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Priority</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Priority</label>
                   <select className="input-field" value={newCase.priority} onChange={e => setNewCase(c => ({ ...c, priority: e.target.value }))}>
                     <option value="P1">P1</option><option value="P2">P2</option><option value="P3">P3</option><option value="P4">P4</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Type</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Type</label>
                   <select className="input-field" value={newCase.case_type} onChange={e => setNewCase(c => ({ ...c, case_type: e.target.value }))}>
                     <option value="incident">Incident</option><option value="investigation">Investigation</option>
                     <option value="service_request">Service Request</option><option value="false_positive">False Positive</option>
