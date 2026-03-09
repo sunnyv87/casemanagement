@@ -21,6 +21,7 @@ export default function StatusBadge({ status, className }: Props) {
   return (
     <span className={cn(
       'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium',
+      'dark:border dark:border-opacity-50',
       getStatusColor(status),
       className
     )}>
