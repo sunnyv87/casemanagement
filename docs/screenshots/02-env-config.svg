@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Consolas, Monaco, monospace">
+  <rect width="800" height="520" fill="#1e1e2e" rx="12"/>
+  <rect x="0" y="0" width="800" height="36" fill="#313244" rx="12"/>
+  <rect x="0" y="24" width="800" height="12" fill="#313244"/>
+  <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
+  <circle cx="40" cy="18" r="6" fill="#f9e2af"/>
+  <circle cx="60" cy="18" r="6" fill="#a6e3a1"/>
+  <text x="400" y="22" text-anchor="middle" fill="#cdd6f4" font-size="12">backend/.env - Environment Configuration</text>
+
+  <text x="24" y="62" fill="#6c7086" font-size="12"># Server</text>
+  <text x="24" y="80" fill="#89b4fa" font-size="12">PORT</text><text x="60" y="80" fill="#f38ba8" font-size="12">=</text><text x="72" y="80" fill="#a6e3a1" font-size="12">3001</text>
+  <text x="24" y="98" fill="#89b4fa" font-size="12">NODE_ENV</text><text x="96" y="98" fill="#f38ba8" font-size="12">=</text><text x="108" y="98" fill="#a6e3a1" font-size="12">development</text>
+
+  <text x="24" y="128" fill="#6c7086" font-size="12"># Database</text>
+  <text x="24" y="146" fill="#89b4fa" font-size="12">DATABASE_URL</text><text x="120" y="146" fill="#f38ba8" font-size="12">=</text><text x="132" y="146" fill="#a6e3a1" font-size="12">postgresql://soc_user:soc_password@localhost:5432/soc_platform</text>
+  <text x="24" y="164" fill="#89b4fa" font-size="12">DB_POOL_MIN</text><text x="114" y="164" fill="#f38ba8" font-size="12">=</text><text x="126" y="164" fill="#a6e3a1" font-size="12">2</text>
+  <text x="24" y="182" fill="#89b4fa" font-size="12">DB_POOL_MAX</text><text x="114" y="182" fill="#f38ba8" font-size="12">=</text><text x="126" y="182" fill="#a6e3a1" font-size="12">10</text>
+
+  <text x="24" y="212" fill="#6c7086" font-size="12"># Redis</text>
+  <text x="24" y="230" fill="#89b4fa" font-size="12">REDIS_URL</text><text x="102" y="230" fill="#f38ba8" font-size="12">=</text><text x="114" y="230" fill="#a6e3a1" font-size="12">redis://localhost:6379</text>
+
+  <text x="24" y="260" fill="#6c7086" font-size="12"># JWT Authentication</text>
+  <text x="24" y="278" fill="#89b4fa" font-size="12">JWT_SECRET</text><text x="108" y="278" fill="#f38ba8" font-size="12">=</text><text x="120" y="278" fill="#f9e2af" font-size="12">your-jwt-secret-key-change-in-production</text>
+  <text x="24" y="296" fill="#89b4fa" font-size="12">JWT_EXPIRY</text><text x="108" y="296" fill="#f38ba8" font-size="12">=</text><text x="120" y="296" fill="#a6e3a1" font-size="12">15m</text>
+  <text x="24" y="314" fill="#89b4fa" font-size="12">JWT_REFRESH_EXPIRY</text><text x="168" y="314" fill="#f38ba8" font-size="12">=</text><text x="180" y="314" fill="#a6e3a1" font-size="12">7d</text>
+
+  <text x="24" y="344" fill="#6c7086" font-size="12"># RabbitMQ</text>
+  <text x="24" y="362" fill="#89b4fa" font-size="12">RABBITMQ_URL</text><text x="126" y="362" fill="#f38ba8" font-size="12">=</text><text x="138" y="362" fill="#a6e3a1" font-size="12">amqp://localhost:5672</text>
+
+  <text x="24" y="392" fill="#6c7086" font-size="12"># Email (SMTP)</text>
+  <text x="24" y="410" fill="#89b4fa" font-size="12">SMTP_HOST</text><text x="102" y="410" fill="#f38ba8" font-size="12">=</text><text x="114" y="410" fill="#a6e3a1" font-size="12">smtp.example.com</text>
+  <text x="24" y="428" fill="#89b4fa" font-size="12">SMTP_PORT</text><text x="102" y="428" fill="#f38ba8" font-size="12">=</text><text x="114" y="428" fill="#a6e3a1" font-size="12">587</text>
+
+  <text x="24" y="458" fill="#6c7086" font-size="12"># Security</text>
+  <text x="24" y="476" fill="#89b4fa" font-size="12">ENCRYPTION_KEY</text><text x="138" y="476" fill="#f38ba8" font-size="12">=</text><text x="150" y="476" fill="#f9e2af" font-size="12">your-256-bit-encryption-key-change-in-production</text>
+
+  <!-- Warning callout -->
+  <rect x="24" y="492" width="752" height="20" fill="#f9e2af" fill-opacity="0.1" rx="4"/>
+  <text x="36" y="506" fill="#f9e2af" font-size="11">⚠ Change JWT_SECRET and ENCRYPTION_KEY before deploying to production!</text>
+</svg>

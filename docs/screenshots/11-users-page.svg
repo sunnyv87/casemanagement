@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- Browser frame -->
+  <rect width="1100" height="500" fill="#f9fafb" rx="12"/>
+  <rect x="0" y="0" width="1100" height="30" fill="#f3f4f6" rx="12"/>
+  <rect x="0" y="18" width="1100" height="12" fill="#f3f4f6"/>
+  <circle cx="18" cy="14" r="5" fill="#ef4444"/>
+  <circle cx="36" cy="14" r="5" fill="#f59e0b"/>
+  <circle cx="54" cy="14" r="5" fill="#22c55e"/>
+  <rect x="300" y="6" width="500" height="18" rx="9" fill="#e5e7eb"/>
+  <text x="550" y="19" text-anchor="middle" fill="#6b7280" font-size="10">localhost:5173/users</text>
+
+  <!-- Sidebar (condensed) -->
+  <rect x="0" y="30" width="220" height="470" fill="#111827"/>
+  <text x="60" y="58" fill="white" font-size="14" font-weight="bold">TechD SOC</text>
+  <text x="48" y="108" fill="#9ca3af" font-size="12">📊 Dashboard</text>
+  <text x="48" y="138" fill="#9ca3af" font-size="12">📁 Cases</text>
+  <rect x="12" y="150" width="196" height="32" rx="8" fill="#2563eb"/>
+  <text x="48" y="172" fill="white" font-size="12">👥 Users</text>
+
+  <!-- Top Header -->
+  <rect x="220" y="30" width="880" height="50" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Page Header -->
+  <text x="244" y="110" fill="#111827" font-size="20" font-weight="bold">Users</text>
+  <rect x="970" y="90" width="100" height="34" rx="8" fill="#2563eb"/>
+  <text x="1020" y="112" text-anchor="middle" fill="white" font-size="12" font-weight="500">+ Add User</text>
+
+  <!-- Search & Filter -->
+  <rect x="244" y="128" width="300" height="34" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="272" y="150" fill="#9ca3af" font-size="11">🔍 Search users...</text>
+  <rect x="556" y="128" width="120" height="34" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="572" y="150" fill="#6b7280" font-size="11">All Roles ▾</text>
+
+  <!-- Data Table -->
+  <rect x="244" y="178" width="826" height="300" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Table Header -->
+  <rect x="244" y="178" width="826" height="36" rx="12" fill="#f9fafb"/>
+  <rect x="244" y="202" width="826" height="12" fill="#f9fafb"/>
+  <text x="264" y="200" fill="#6b7280" font-size="10" font-weight="600">NAME</text>
+  <text x="420" y="200" fill="#6b7280" font-size="10" font-weight="600">EMAIL</text>
+  <text x="620" y="200" fill="#6b7280" font-size="10" font-weight="600">ROLE</text>
+  <text x="730" y="200" fill="#6b7280" font-size="10" font-weight="600">STATUS</text>
+  <text x="830" y="200" fill="#6b7280" font-size="10" font-weight="600">MFA</text>
+  <text x="930" y="200" fill="#6b7280" font-size="10" font-weight="600">LAST LOGIN</text>
+
+  <!-- Row 1 -->
+  <text x="264" y="240" fill="#111827" font-size="11" font-weight="500">Admin Kumar</text>
+  <text x="420" y="240" fill="#6b7280" font-size="11">admin@techd.com</text>
+  <rect x="620" y="228" width="48" height="18" rx="9" fill="#f3e8ff"/>
+  <text x="644" y="241" text-anchor="middle" fill="#6b21a8" font-size="9" font-weight="500">admin</text>
+  <rect x="730" y="228" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="752" y="241" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+  <text x="830" y="240" fill="#22c55e" font-size="10">Enabled</text>
+  <text x="930" y="240" fill="#6b7280" font-size="10">2h ago</text>
+  <line x1="260" y1="252" x2="1054" y2="252" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="264" y="276" fill="#111827" font-size="11" font-weight="500">Manager Singh</text>
+  <text x="420" y="276" fill="#6b7280" font-size="11">manager@techd.com</text>
+  <rect x="620" y="264" width="58" height="18" rx="9" fill="#dbeafe"/>
+  <text x="649" y="277" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="500">manager</text>
+  <rect x="730" y="264" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="752" y="277" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+  <text x="830" y="276" fill="#22c55e" font-size="10">Enabled</text>
+  <text x="930" y="276" fill="#6b7280" font-size="10">1d ago</text>
+  <line x1="260" y1="288" x2="1054" y2="288" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="264" y="312" fill="#111827" font-size="11" font-weight="500">Analyst Kumar</text>
+  <text x="420" y="312" fill="#6b7280" font-size="11">analyst1@techd.com</text>
+  <rect x="620" y="300" width="52" height="18" rx="9" fill="#dcfce7"/>
+  <text x="646" y="313" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">analyst</text>
+  <rect x="730" y="300" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="752" y="313" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+  <text x="830" y="312" fill="#9ca3af" font-size="10">Disabled</text>
+  <text x="930" y="312" fill="#6b7280" font-size="10">5h ago</text>
+  <line x1="260" y1="324" x2="1054" y2="324" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="264" y="348" fill="#111827" font-size="11" font-weight="500">John Anderson</text>
+  <text x="420" y="348" fill="#6b7280" font-size="11">john@acmefinancial.com</text>
+  <rect x="620" y="336" width="62" height="18" rx="9" fill="#f3f4f6"/>
+  <text x="651" y="349" text-anchor="middle" fill="#374151" font-size="9" font-weight="500">customer</text>
+  <rect x="730" y="336" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="752" y="349" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+  <text x="830" y="348" fill="#9ca3af" font-size="10">Disabled</text>
+  <text x="930" y="348" fill="#6b7280" font-size="10">3d ago</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- Browser frame -->
+  <rect width="1100" height="600" fill="#f9fafb" rx="12"/>
+  <rect x="0" y="0" width="1100" height="30" fill="#f3f4f6" rx="12"/>
+  <rect x="0" y="18" width="1100" height="12" fill="#f3f4f6"/>
+  <circle cx="18" cy="14" r="5" fill="#ef4444"/>
+  <circle cx="36" cy="14" r="5" fill="#f59e0b"/>
+  <circle cx="54" cy="14" r="5" fill="#22c55e"/>
+  <rect x="300" y="6" width="500" height="18" rx="9" fill="#e5e7eb"/>
+  <text x="550" y="19" text-anchor="middle" fill="#6b7280" font-size="10">localhost:5173/integrations</text>
+
+  <!-- Sidebar (condensed) -->
+  <rect x="0" y="30" width="220" height="570" fill="#111827"/>
+  <text x="60" y="58" fill="white" font-size="14" font-weight="bold">TechD SOC</text>
+  <text x="48" y="108" fill="#9ca3af" font-size="12">📊 Dashboard</text>
+  <text x="48" y="138" fill="#9ca3af" font-size="12">⚠️ Alert Queue</text>
+  <text x="48" y="168" fill="#9ca3af" font-size="12">📁 Cases</text>
+  <text x="48" y="198" fill="#9ca3af" font-size="12">🏢 Customers</text>
+  <text x="48" y="228" fill="#9ca3af" font-size="12">👥 Users</text>
+  <rect x="12" y="240" width="196" height="32" rx="8" fill="#2563eb"/>
+  <text x="48" y="262" fill="white" font-size="12">🔌 Integrations</text>
+
+  <!-- Top Header -->
+  <rect x="220" y="30" width="880" height="50" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Page Header -->
+  <text x="244" y="110" fill="#111827" font-size="20" font-weight="bold">SIEM/SOAR Integrations</text>
+  <rect x="916" y="90" width="150" height="34" rx="8" fill="#2563eb"/>
+  <text x="991" y="112" text-anchor="middle" fill="white" font-size="12" font-weight="500">+ Add Integration</text>
+
+  <!-- Integration Card 1 - Securonix -->
+  <rect x="244" y="136" width="260" height="250" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="260" y="152" width="36" height="36" rx="8" fill="#dbeafe"/>
+  <text x="278" y="176" text-anchor="middle" fill="#1e40af" font-size="16">🔌</text>
+  <text x="308" y="166" fill="#111827" font-size="13" font-weight="600">Acme Securonix Prod</text>
+  <text x="308" y="182" fill="#6b7280" font-size="10">securonix</text>
+  <rect x="444" y="156" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="466" y="169" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+
+  <text x="264" y="216" fill="#6b7280" font-size="10">Customer</text><text x="482" y="216" fill="#111827" font-size="10" text-anchor="end" font-weight="500">Acme Financial</text>
+  <text x="264" y="236" fill="#6b7280" font-size="10">Mode</text><text x="482" y="236" fill="#111827" font-size="10" text-anchor="end">Pull</text>
+  <text x="264" y="256" fill="#6b7280" font-size="10">Polling</text><text x="482" y="256" fill="#111827" font-size="10" text-anchor="end">60s</text>
+  <text x="264" y="276" fill="#6b7280" font-size="10">Last Poll</text><text x="482" y="276" fill="#111827" font-size="10" text-anchor="end">2m ago</text>
+
+  <rect x="260" y="340" width="170" height="28" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="345" y="359" text-anchor="middle" fill="#374151" font-size="10">🧪 Test</text>
+  <rect x="440" y="340" width="50" height="28" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="465" y="359" text-anchor="middle" fill="#991b1b" font-size="10">🗑</text>
+
+  <!-- Integration Card 2 - Splunk -->
+  <rect x="520" y="136" width="260" height="250" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="536" y="152" width="36" height="36" rx="8" fill="#dcfce7"/>
+  <text x="554" y="176" text-anchor="middle" fill="#166534" font-size="16">🔌</text>
+  <text x="584" y="166" fill="#111827" font-size="13" font-weight="600">GlobalTech Splunk ES</text>
+  <text x="584" y="182" fill="#6b7280" font-size="10">splunk</text>
+  <rect x="720" y="156" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="742" y="169" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">active</text>
+
+  <text x="540" y="216" fill="#6b7280" font-size="10">Customer</text><text x="758" y="216" fill="#111827" font-size="10" text-anchor="end" font-weight="500">GlobalTech Mfg</text>
+  <text x="540" y="236" fill="#6b7280" font-size="10">Mode</text><text x="758" y="236" fill="#111827" font-size="10" text-anchor="end">Both</text>
+  <text x="540" y="256" fill="#6b7280" font-size="10">Polling</text><text x="758" y="256" fill="#111827" font-size="10" text-anchor="end">120s</text>
+  <text x="540" y="276" fill="#6b7280" font-size="10">Last Poll</text><text x="758" y="276" fill="#111827" font-size="10" text-anchor="end">5m ago</text>
+
+  <rect x="536" y="340" width="170" height="28" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="621" y="359" text-anchor="middle" fill="#374151" font-size="10">🧪 Test</text>
+  <rect x="716" y="340" width="50" height="28" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="741" y="359" text-anchor="middle" fill="#991b1b" font-size="10">🗑</text>
+
+  <!-- Integration Card 3 - FortiSOAR (error) -->
+  <rect x="796" y="136" width="260" height="250" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="812" y="152" width="36" height="36" rx="8" fill="#fff7ed"/>
+  <text x="830" y="176" text-anchor="middle" fill="#9a3412" font-size="16">🔌</text>
+  <text x="860" y="166" fill="#111827" font-size="13" font-weight="600">CityPower FortiSOAR</text>
+  <text x="860" y="182" fill="#6b7280" font-size="10">fortisoar</text>
+  <rect x="996" y="156" width="44" height="18" rx="9" fill="#fef2f2"/>
+  <text x="1018" y="169" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="500">error</text>
+
+  <text x="816" y="216" fill="#6b7280" font-size="10">Customer</text><text x="1034" y="216" fill="#111827" font-size="10" text-anchor="end" font-weight="500">CityPower Utils</text>
+  <text x="816" y="236" fill="#6b7280" font-size="10">Mode</text><text x="1034" y="236" fill="#111827" font-size="10" text-anchor="end">Both</text>
+  <text x="816" y="256" fill="#6b7280" font-size="10">Polling</text><text x="1034" y="256" fill="#111827" font-size="10" text-anchor="end">60s</text>
+  <text x="816" y="276" fill="#6b7280" font-size="10">Bidirectional</text><text x="1034" y="276" fill="#22c55e" font-size="10" text-anchor="end">Yes</text>
+
+  <!-- Error message -->
+  <rect x="812" y="294" width="228" height="30" rx="6" fill="#fef2f2"/>
+  <text x="822" y="313" fill="#991b1b" font-size="9">Connection timeout: unable to reach host</text>
+
+  <rect x="812" y="340" width="170" height="28" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="897" y="359" text-anchor="middle" fill="#374151" font-size="10">🧪 Test</text>
+  <rect x="992" y="340" width="50" height="28" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="1017" y="359" text-anchor="middle" fill="#991b1b" font-size="10">🗑</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827"/>
+      <stop offset="50%" style="stop-color:#1f2937"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)" rx="12"/>
+
+  <!-- Shield icon -->
+  <rect x="425" y="100" width="50" height="50" rx="12" fill="#2563eb"/>
+  <text x="450" y="133" text-anchor="middle" fill="white" font-size="24">🛡</text>
+
+  <!-- Title -->
+  <text x="450" y="180" text-anchor="middle" fill="white" font-size="24" font-weight="bold">TechD SOC Platform</text>
+  <text x="450" y="205" text-anchor="middle" fill="#9ca3af" font-size="14">Multi-SIEM Case Management</text>
+
+  <!-- Login Card -->
+  <rect x="275" y="225" width="350" height="310" rx="16" fill="white"/>
+
+  <!-- Card Title -->
+  <text x="310" y="262" fill="#111827" font-size="18" font-weight="600">Sign in to your account</text>
+
+  <!-- Email Field -->
+  <text x="310" y="295" fill="#374151" font-size="13" font-weight="500">Email</text>
+  <rect x="310" y="302" width="280" height="38" rx="8" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="324" y="326" fill="#9ca3af" font-size="13">you@techd.com</text>
+
+  <!-- Password Field -->
+  <text x="310" y="362" fill="#374151" font-size="13" font-weight="500">Password</text>
+  <rect x="310" y="369" width="280" height="38" rx="8" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="324" y="393" fill="#9ca3af" font-size="13">Enter your password</text>
+  <!-- Eye icon -->
+  <circle cx="572" cy="388" r="8" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- Sign In Button -->
+  <rect x="310" y="425" width="280" height="42" rx="8" fill="#2563eb"/>
+  <text x="450" y="451" text-anchor="middle" fill="white" font-size="14" font-weight="600">Sign In</text>
+
+  <!-- Footer -->
+  <rect x="310" y="483" width="280" height="36" rx="8" fill="#f9fafb"/>
+  <text x="450" y="506" text-anchor="middle" fill="#6b7280" font-size="10">TechD Cybersecurity Limited | CERT-In Empanelled | ISO 27001 Certified</text>
+
+  <!-- Browser frame hint -->
+  <rect x="0" y="0" width="900" height="30" fill="#f3f4f6" rx="12"/>
+  <rect x="0" y="18" width="900" height="12" fill="#f3f4f6"/>
+  <circle cx="18" cy="14" r="5" fill="#ef4444"/>
+  <circle cx="36" cy="14" r="5" fill="#f59e0b"/>
+  <circle cx="54" cy="14" r="5" fill="#22c55e"/>
+  <rect x="200" y="6" width="500" height="18" rx="9" fill="#e5e7eb"/>
+  <text x="450" y="19" text-anchor="middle" fill="#6b7280" font-size="10">localhost:5173/login</text>
+</svg>

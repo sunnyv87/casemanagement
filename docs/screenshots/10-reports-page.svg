@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <!-- Browser frame -->
+  <rect width="1100" height="650" fill="#f9fafb" rx="12"/>
+  <rect x="0" y="0" width="1100" height="30" fill="#f3f4f6" rx="12"/>
+  <rect x="0" y="18" width="1100" height="12" fill="#f3f4f6"/>
+  <circle cx="18" cy="14" r="5" fill="#ef4444"/>
+  <circle cx="36" cy="14" r="5" fill="#f59e0b"/>
+  <circle cx="54" cy="14" r="5" fill="#22c55e"/>
+  <rect x="300" y="6" width="500" height="18" rx="9" fill="#e5e7eb"/>
+  <text x="550" y="19" text-anchor="middle" fill="#6b7280" font-size="10">localhost:5173/reports</text>
+
+  <!-- Sidebar (condensed) -->
+  <rect x="0" y="30" width="220" height="620" fill="#111827"/>
+  <text x="60" y="58" fill="white" font-size="14" font-weight="bold">TechD SOC</text>
+  <text x="48" y="108" fill="#9ca3af" font-size="12">📊 Dashboard</text>
+  <text x="48" y="138" fill="#9ca3af" font-size="12">📁 Cases</text>
+  <rect x="12" y="150" width="196" height="32" rx="8" fill="#2563eb"/>
+  <text x="48" y="172" fill="white" font-size="12">📄 Reports</text>
+  <text x="48" y="204" fill="#9ca3af" font-size="12">📋 Audit Logs</text>
+
+  <!-- Top Header -->
+  <rect x="220" y="30" width="880" height="50" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Page Title -->
+  <text x="244" y="110" fill="#111827" font-size="20" font-weight="bold">Monthly Security Report</text>
+
+  <!-- Filter Card -->
+  <rect x="244" y="124" width="826" height="64" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="264" y="148" fill="#374151" font-size="11" font-weight="500">Customer</text>
+  <rect x="264" y="154" width="200" height="28" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="278" y="173" fill="#111827" font-size="11">Acme Financial ▾</text>
+
+  <text x="484" y="148" fill="#374151" font-size="11" font-weight="500">Month</text>
+  <rect x="484" y="154" width="120" height="28" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="498" y="173" fill="#111827" font-size="11">January ▾</text>
+
+  <text x="624" y="148" fill="#374151" font-size="11" font-weight="500">Year</text>
+  <rect x="624" y="154" width="100" height="28" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="638" y="173" fill="#111827" font-size="11">2026 ▾</text>
+
+  <!-- Report Header Banner -->
+  <defs>
+    <linearGradient id="reportBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+  </defs>
+  <rect x="244" y="200" width="826" height="70" rx="12" fill="url(#reportBg)"/>
+  <text x="270" y="232" fill="white" font-size="20" font-weight="bold">Acme Financial Services</text>
+  <text x="270" y="254" fill="#93c5fd" font-size="12">Report Period: Jan 1, 2026 - Jan 31, 2026</text>
+  <text x="1040" y="240" text-anchor="end" fill="#93c5fd" font-size="32">📄</text>
+
+  <!-- Summary Cards -->
+  <rect x="244" y="284" width="195" height="72" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="342" y="320" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">156</text>
+  <text x="342" y="340" text-anchor="middle" fill="#6b7280" font-size="10">Total Alerts</text>
+
+  <rect x="453" y="284" width="195" height="72" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="551" y="320" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">23</text>
+  <text x="551" y="340" text-anchor="middle" fill="#6b7280" font-size="10">Total Cases</text>
+
+  <rect x="662" y="284" width="195" height="72" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="760" y="320" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">18</text>
+  <text x="760" y="340" text-anchor="middle" fill="#6b7280" font-size="10">Cases Resolved</text>
+
+  <rect x="871" y="284" width="195" height="72" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="969" y="320" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">4.2h</text>
+  <text x="969" y="340" text-anchor="middle" fill="#6b7280" font-size="10">Avg MTTR</text>
+
+  <!-- Alerts by Severity Card -->
+  <rect x="244" y="370" width="400" height="200" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="270" y="398" fill="#111827" font-size="14" font-weight="600">Alerts by Severity</text>
+
+  <rect x="270" y="416" width="52" height="18" rx="9" fill="#fef2f2"/>
+  <text x="296" y="429" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="500">critical</text>
+  <text x="616" y="429" fill="#111827" font-size="12" text-anchor="end" font-weight="500">12</text>
+
+  <rect x="270" y="446" width="36" height="18" rx="9" fill="#fff7ed"/>
+  <text x="288" y="459" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="500">high</text>
+  <text x="616" y="459" fill="#111827" font-size="12" text-anchor="end" font-weight="500">38</text>
+
+  <rect x="270" y="476" width="52" height="18" rx="9" fill="#fef9c3"/>
+  <text x="296" y="489" text-anchor="middle" fill="#854d0e" font-size="9" font-weight="500">medium</text>
+  <text x="616" y="489" fill="#111827" font-size="12" text-anchor="end" font-weight="500">67</text>
+
+  <rect x="270" y="506" width="32" height="18" rx="9" fill="#dcfce7"/>
+  <text x="286" y="519" text-anchor="middle" fill="#166534" font-size="9" font-weight="500">low</text>
+  <text x="616" y="519" fill="#111827" font-size="12" text-anchor="end" font-weight="500">39</text>
+
+  <!-- SLA Performance Card -->
+  <rect x="660" y="370" width="410" height="200" rx="12" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="686" y="398" fill="#111827" font-size="14" font-weight="600">SLA Performance</text>
+
+  <text x="686" y="434" fill="#6b7280" font-size="12">Response SLA Met</text>
+  <text x="1040" y="434" fill="#22c55e" font-size="12" text-anchor="end" font-weight="500">21 / 23</text>
+
+  <text x="686" y="468" fill="#6b7280" font-size="12">Resolution SLA Met</text>
+  <text x="1040" y="468" fill="#22c55e" font-size="12" text-anchor="end" font-weight="500">19 / 23</text>
+
+  <!-- SLA progress bars -->
+  <rect x="686" y="486" width="360" height="8" rx="4" fill="#e5e7eb"/>
+  <rect x="686" y="486" width="328" height="8" rx="4" fill="#22c55e"/>
+  <text x="1040" y="508" fill="#6b7280" font-size="10" text-anchor="end">91% Response | 83% Resolution</text>
+
+  <!-- Label -->
+  <rect x="244" y="590" width="260" height="24" rx="6" fill="#dbeafe"/>
+  <text x="254" y="606" fill="#1e40af" font-size="10" font-weight="500">Monthly Report View - Customer: Acme Financial</text>
+</svg>
