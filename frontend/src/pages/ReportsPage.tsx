@@ -26,24 +26,24 @@ export default function ReportsPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-gray-900">Monthly Security Report</h1>
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Monthly Security Report</h1>
       <div className="card">
         <div className="flex flex-wrap gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Customer</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Customer</label>
             <select className="input-field w-auto" value={selectedCustomer} onChange={e => setSelectedCustomer(e.target.value)}>
               <option value="">Select customer...</option>
               {customers?.data?.map((c: any) => <option key={c.id} value={c.id}>{c.name}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Month</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Month</label>
             <select className="input-field w-auto" value={month} onChange={e => setMonth(parseInt(e.target.value))}>
               {Array.from({ length: 12 }, (_, i) => <option key={i + 1} value={i + 1}>{new Date(2024, i).toLocaleString('default', { month: 'long' })}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Year</label>
             <select className="input-field w-auto" value={year} onChange={e => setYear(parseInt(e.target.value))}>
               {[2024, 2025, 2026].map(y => <option key={y} value={y}>{y}</option>)}
             </select>
@@ -65,10 +65,10 @@ export default function ReportsPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="card text-center"><p className="text-3xl font-bold text-gray-900">{report.alert_summary?.total_alerts || 0}</p><p className="text-sm text-gray-500">Total Alerts</p></div>
-            <div className="card text-center"><p className="text-3xl font-bold text-gray-900">{report.case_summary?.total_cases || 0}</p><p className="text-sm text-gray-500">Total Cases</p></div>
-            <div className="card text-center"><p className="text-3xl font-bold text-gray-900">{report.case_summary?.resolved || 0}</p><p className="text-sm text-gray-500">Cases Resolved</p></div>
-            <div className="card text-center"><p className="text-3xl font-bold text-gray-900">{report.mttr_hours}h</p><p className="text-sm text-gray-500">Avg MTTR</p></div>
+            <div className="card text-center"><p className="text-3xl font-bold text-gray-900 dark:text-gray-100">{report.alert_summary?.total_alerts || 0}</p><p className="text-sm text-gray-500 dark:text-gray-400">Total Alerts</p></div>
+            <div className="card text-center"><p className="text-3xl font-bold text-gray-900 dark:text-gray-100">{report.case_summary?.total_cases || 0}</p><p className="text-sm text-gray-500 dark:text-gray-400">Total Cases</p></div>
+            <div className="card text-center"><p className="text-3xl font-bold text-gray-900 dark:text-gray-100">{report.case_summary?.resolved || 0}</p><p className="text-sm text-gray-500 dark:text-gray-400">Cases Resolved</p></div>
+            <div className="card text-center"><p className="text-3xl font-bold text-gray-900 dark:text-gray-100">{report.mttr_hours}h</p><p className="text-sm text-gray-500 dark:text-gray-400">Avg MTTR</p></div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="card">
@@ -90,17 +90,17 @@ export default function ReportsPage() {
             <div className="card">
               <h3 className="text-lg font-semibold mb-4">SLA Performance</h3>
               <div className="space-y-3">
-                <div className="flex justify-between"><span className="text-gray-500">Response SLA Met</span><span className="font-medium text-green-600">{report.sla_performance?.response_met || 0} / {report.sla_performance?.total || 0}</span></div>
-                <div className="flex justify-between"><span className="text-gray-500">Resolution SLA Met</span><span className="font-medium text-green-600">{report.sla_performance?.resolution_met || 0} / {report.sla_performance?.total || 0}</span></div>
+                <div className="flex justify-between"><span className="text-gray-500 dark:text-gray-400">Response SLA Met</span><span className="font-medium text-green-600">{report.sla_performance?.response_met || 0} / {report.sla_performance?.total || 0}</span></div>
+                <div className="flex justify-between"><span className="text-gray-500 dark:text-gray-400">Resolution SLA Met</span><span className="font-medium text-green-600">{report.sla_performance?.resolution_met || 0} / {report.sla_performance?.total || 0}</span></div>
               </div>
             </div>
             <div className="card">
               <h3 className="text-lg font-semibold mb-4">Top Threat Categories</h3>
               <div className="space-y-2">
                 {report.top_threat_categories?.map((t: any) => (
-                  <div key={t.alert_category} className="flex items-center justify-between"><span className="text-sm text-gray-700">{t.alert_category}</span><span className="text-sm font-medium">{t.count}</span></div>
+                  <div key={t.alert_category} className="flex items-center justify-between"><span className="text-sm text-gray-700 dark:text-gray-300">{t.alert_category}</span><span className="text-sm font-medium">{t.count}</span></div>
                 ))}
-                {(!report.top_threat_categories || report.top_threat_categories.length === 0) && <p className="text-gray-500 text-center py-2">No threat data</p>}
+                {(!report.top_threat_categories || report.top_threat_categories.length === 0) && <p className="text-gray-500 dark:text-gray-400 text-center py-2">No threat data</p>}
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function ReportsPage() {
       )}
 
       {!selectedCustomer && !isLoading && (
-        <div className="card text-center py-12"><FileText className="h-12 w-12 mx-auto mb-3 text-gray-400" /><p className="text-gray-500">Select a customer to generate a monthly report</p></div>
+        <div className="card text-center py-12"><FileText className="h-12 w-12 mx-auto mb-3 text-gray-400" /><p className="text-gray-500 dark:text-gray-400">Select a customer to generate a monthly report</p></div>
       )}
     </div>
   );
