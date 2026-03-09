@@ -23,18 +23,18 @@ export default function AlertDetailPage() {
   });
 
   if (isLoading) return <div className="flex justify-center py-12"><div className="animate-spin h-8 w-8 border-4 border-primary-500 border-t-transparent rounded-full" /></div>;
-  if (!alert) return <div className="text-center py-12 text-gray-500">Alert not found</div>;
+  if (!alert) return <div className="text-center py-12 text-gray-500 dark:text-gray-400">Alert not found</div>;
 
   return (
     <div className="space-y-6">
-      <button onClick={() => navigate('/alerts')} className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+      <button onClick={() => navigate('/alerts')} className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:hover:text-gray-100">
         <ArrowLeft className="h-4 w-4" /> Back to Alerts
       </button>
 
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">{alert.alert_name}</h1>
-          <p className="text-gray-500 mt-1">Source: {alert.source_platform} | ID: {alert.source_alert_id}</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{alert.alert_name}</h1>
+          <p className="text-gray-500 dark:text-gray-400 mt-1">Source: {alert.source_platform} | ID: {alert.source_alert_id}</p>
         </div>
         <div className="flex items-center gap-3">
           <SeverityBadge severity={alert.severity} />
@@ -47,19 +47,19 @@ export default function AlertDetailPage() {
           <div className="card">
             <h2 className="text-lg font-semibold mb-4">Alert Details</h2>
             <dl className="grid grid-cols-2 gap-4">
-              <div><dt className="text-sm text-gray-500">Customer</dt><dd className="font-medium">{alert.customer_name}</dd></div>
-              <div><dt className="text-sm text-gray-500">Category</dt><dd className="font-medium">{alert.alert_category || 'N/A'}</dd></div>
-              <div><dt className="text-sm text-gray-500">Source IP</dt><dd className="font-mono text-sm">{alert.source_ip || 'N/A'}</dd></div>
-              <div><dt className="text-sm text-gray-500">Destination IP</dt><dd className="font-mono text-sm">{alert.destination_ip || 'N/A'}</dd></div>
-              <div><dt className="text-sm text-gray-500">Actor / Entity</dt><dd className="font-medium">{alert.actor_entity || 'N/A'}</dd></div>
-              <div><dt className="text-sm text-gray-500">Risk Score</dt><dd className="font-medium">{alert.risk_score ?? 'N/A'}</dd></div>
-              <div><dt className="text-sm text-gray-500">Created</dt><dd>{formatDate(alert.alert_created_at)}</dd></div>
-              <div><dt className="text-sm text-gray-500">Ingested</dt><dd>{formatDate(alert.ingested_at)}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Customer</dt><dd className="font-medium">{alert.customer_name}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Category</dt><dd className="font-medium">{alert.alert_category || 'N/A'}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Source IP</dt><dd className="font-mono text-sm">{alert.source_ip || 'N/A'}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Destination IP</dt><dd className="font-mono text-sm">{alert.destination_ip || 'N/A'}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Actor / Entity</dt><dd className="font-medium">{alert.actor_entity || 'N/A'}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Risk Score</dt><dd className="font-medium">{alert.risk_score ?? 'N/A'}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Created</dt><dd>{formatDate(alert.alert_created_at)}</dd></div>
+              <div><dt className="text-sm text-gray-500 dark:text-gray-400">Ingested</dt><dd>{formatDate(alert.ingested_at)}</dd></div>
             </dl>
             {alert.alert_description && (
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <h3 className="text-sm font-medium text-gray-500 mb-2">Description</h3>
-                <p className="text-gray-700 whitespace-pre-wrap">{alert.alert_description}</p>
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-dark-700">
+                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">Description</h3>
+                <p className="text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{alert.alert_description}</p>
               </div>
             )}
           </div>
@@ -91,7 +91,7 @@ export default function AlertDetailPage() {
               <h2 className="text-lg font-semibold mb-3">Tags</h2>
               <div className="flex flex-wrap gap-2">
                 {alert.tags.map((tag: string) => (
-                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">{tag}</span>
+                  <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 dark:text-gray-300 rounded text-xs">{tag}</span>
                 ))}
               </div>
             </div>
