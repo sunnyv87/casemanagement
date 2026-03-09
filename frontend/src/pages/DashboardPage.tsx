@@ -135,7 +135,7 @@ function SlaCountdown({ breached }: { breached: boolean }) {
 
   useEffect(() => {
     if (breached || time <= 0) return;
-    const interval = setInterval(() => setTime(t => Math.max(0, t - 1)), 1000);
+    const interval = setInterval(() => setTime((t: number) => Math.max(0, t - 1)), 1000);
     return () => clearInterval(interval);
   }, [breached, time]);
 
@@ -208,7 +208,7 @@ export default function DashboardPage() {
 
   const { data, isLoading } = useQuery({
     queryKey: ['dashboard', user?.role],
-    queryFn: () => api.get(dashboardEndpoint).then(r => r.data),
+    queryFn: () => api.get(dashboardEndpoint).then((r: any) => r.data),
   });
 
   if (isLoading) {
